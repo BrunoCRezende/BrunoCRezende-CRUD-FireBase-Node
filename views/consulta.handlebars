@@ -1,0 +1,36 @@
+    <div class="container">
+        <h4>Consultar - Agendamento de Potenciais Clientes</h4>
+        <p>Sistema utilizado para agendamentos de serviços</p>
+            <div class="row">
+        <div class="col-1">
+            &nbsp;
+        </div>
+    </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Origem</th>
+                    <th>Data Contato</th>
+                    <th>Observação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <td>{{this.nome}}</td>
+                    <td>{{this.telefone}}</td>
+                    <td>{{this.origem}}</td>
+                    <td>{{this.data_contato}}</td>
+                    <td>{{this.observacao}}</td>
+                    <td>
+                        <a href="/editar/{{id}}"><button class="btn btn-primary">Editar</button></a>
+                        <a href="/excluir/{{id}}"><button class="btn btn-danger">Excluir</button></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    
